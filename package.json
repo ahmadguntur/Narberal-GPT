@@ -1,0 +1,19 @@
+{
+  "name": "Nabreral-GPT",
+  "version": "1.0.0",
+  "description": "A Discord Bot made by: NotYourUncle#5093",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "NotYourUncle#5093",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "discord.js": "^14.9.0",
+    "express": "^4.18.2",
+    "node-fetch": "^3.2.6",
+    "openai": "^3.2.1"
+  }
+}
