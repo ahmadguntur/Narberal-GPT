@@ -1,5 +1,5 @@
 const { ask } = require("./ai.js"); //import the "ask" function from the "ai.js" file
-const { Client, Events, GatewayIntentBits } = require('discord.js'); //v14.6.0
+const { Client, Events, GatewayIntentBits, ActivityType } = require('discord.js'); //v14.6.0
 const token = process.env['YOUR_DISCORD_TOKEN'];
 const http = require('express')();
 http.get('/', (req, res) => res.send('Server is up.'));
@@ -17,7 +17,13 @@ client.once(Events.ClientReady, c => {
   console.log(`Ready! Logged in as ${c.user.tag}`);
 });
 
+client.on("ready",()=>{
+  console.log("Bot is online")
+  client.user.setActivity('activity', { type: ActivityType.Listening });
+})
+
 client.on(Events.MessageCreate, async message => {
+  
   if (message.content.substring(0, 1) === "!") {
     const prompt = message.content.substring(1); //remove the exclamation mark from the message
     const answer = await ask(prompt); //prompt GPT-3
