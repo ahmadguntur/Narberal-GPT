@@ -17,6 +17,7 @@ client.once(Events.ClientReady, c => {
   console.log(`Ready! Logged in as ${c.user.tag}`);
 });
 
+// setup your bot status
 client.on("ready",()=>{
   console.log("Bot is online")
   client.user.setActivity('activity', { type: ActivityType.Listening });
