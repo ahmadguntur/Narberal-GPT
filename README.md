@@ -47,5 +47,5 @@ Openai Discord Bot
   
 ## Authors
 
-- Discord : [notyouruncle_]
+- Discord : notyouruncle_
 - Feel free to use and modified.. :D
